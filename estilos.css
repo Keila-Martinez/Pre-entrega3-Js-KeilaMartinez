@@ -7,7 +7,6 @@
 body
 {
     background-color: #F8E8EE;
-    
 }
 
 header
@@ -15,8 +14,6 @@ header
     background-image: url("imagenes salon/bkgh.png") ;
     background-repeat: no-repeat ;
     background-size: cover;
-
-    
 }
 
 footer 
@@ -35,7 +32,7 @@ nav{
     font-weight: 500;
     font-size: 30em;
     
-      }
+}
 p{
     font-family: 'Open Sans', sans-serif;
     font-size: 20px;
@@ -203,43 +200,86 @@ section#extra{
 }
 
 /*medias*/
-
+@media (min-width: 601px){
+    .footer {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 20px;
+        text-align: center;
+    }
+    
+    .contacto, .logo, .mapa {
+        padding: 20px;
+    }
+}
 @media (max-width: 600px){
+    
+    * {
+        margin: 0;
+        padding: 0;
+        
+    }
     .logoredondo{
         display: none;
     }
-    body{
-        width: 60em;
-    }
+    
     header
     {
-        
         background-image: url("imagenes salon/bkgh.png") ;
         background-repeat: no-repeat ;
         background-size: cover;
+        width: auto;;
     }
-    table h1{
-        margin-left: 2.5em;
-    }
-    p{
-        font-size: 30px ;
-    }
-    nav a{
-        font-size: 35px;
-    }
-    div p{
-        margin-left: 2.5em;
-        margin-right: 2.5em;
-    }
-}
-
-@media (min-width: 601px) and (max-width: 1024px) {
-    body{
-        width: 60em;
-    }
-    header {
-        height: 250px;
-    }
-
    
+    section p{
+        font-size: 20px ;
+        margin-left: -3em;
+        margin-right: -3em;
+    }
+
+    .titulo-seccion{
+        text-align: center;
+        font-family: 'Oswald', sans-serif;
+        font-weight: 500;
+        font-size: 35px;
+        color:  rgb(158, 4, 76);
+    }
+
+    nav a{
+        font-family: 'Oswald', sans-serif;
+        font-weight: 500;
+        font-size: 2.5em;
+        display: block;
+        
+    }
+    
+    .footer {
+        grid-template-columns: 1fr;
+    }
+
+    /*--------Disposición de la grilla para pantallas chicas (manicuria)---------*/
+    #grilla {
+        display: grid;
+        grid-template-areas: 
+        "fotosmanos fotosmanos"
+        "contenido contenido" 
+        "aside aside"
+        "extra extra";
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto auto auto;
+       
+    }
+    
+    div#fotosmanos{
+        grid-area: fotosmanos;
+        display: flex;
+        flex-direction: column;
+        grid-gap: 20px 20px;
+        align-items: center;
+         justify-content: center;
+    }
+    
+    
+
 }
+

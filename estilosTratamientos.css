@@ -1,0 +1,67 @@
+header{
+    background-image: url('imagenes salon/bkgh.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+body{
+    background-color: #F8E8EE;
+}
+footer 
+{
+    background-color: rgb(253, 253, 253);
+    
+}
+nav{
+    font-family: 'Oswald', sans-serif;
+    font-size: 24px;
+    
+}
+nav.navbar {
+    background-color:transparent; /* Asegúrate de que el fondo de la barra de navegación sea transparente */
+}
+h1{
+    font-family: 'Oswald', sans-serif;
+    font-weight: 500;
+    font-size: 35px;
+    color:  rgb(158, 4, 76);
+    
+}
+h2{
+    font-family: 'Oswald', sans-serif;
+    font-weight: 500;
+    font-size: 30px;
+    color: rgb(158, 4, 76);
+}
+h3{
+    font-family: 'Oswald', sans-serif;
+    font-weight: 500;
+    font-size: 1.5em;
+    color: rgb(158, 4, 76);
+}
+h4{
+    font-family: 'Oswald', sans-serif;
+    font-weight: 300;
+    font-size: 30px;
+    color: rgb(150, 48, 95);
+}
+a {
+    color: #e93a8c; 
+}
+a:hover {
+    color: #ff0000; 
+}
+a:visited {
+    color: #da648b;
+}
+a:active {
+    color: #ae15c2;
+}
+.titulo-seccion{
+    margin: 1em 1em 1em 1em;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 500;
+    font-size: 35px;
+   color:  rgb(158, 4, 76);
+    
+}
