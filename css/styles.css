@@ -1,0 +1,341 @@
+@charset "UTF-8";
+* {
+  margin: 0%;
+  padding: 0%;
+}
+
+body {
+  background-color: #F8E8EE;
+}
+
+header {
+  background-image: url("../imagenes salon/bkgh.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 10em;
+}
+
+footer {
+  background-color: rgb(253, 253, 253);
+}
+
+.nav-index {
+  margin-bottom: 10%;
+}
+
+p {
+  font-family: "Oswald", sans-serif;
+  font-size: 20px;
+}
+
+h1, .titulo-seccion {
+  font-family: "Oswald";
+  font-size: 35px;
+  color: rgb(158, 4, 76);
+  font-weight: 500;
+}
+
+.titulo-seccion {
+  margin: 1em 1em 1em 1em;
+}
+
+h2, h4, h3 {
+  font-family: "Oswald", sans-serif;
+  font-weight: 500;
+  font-size: 30px;
+  color: rgb(158, 4, 76);
+}
+
+h3 {
+  font-size: 1.5em;
+}
+
+h4 {
+  font-weight: 300;
+  color: rgb(150, 48, 95);
+}
+
+div {
+  text-align: center;
+  margin-bottom: 5%;
+}
+
+iframe {
+  margin-top: 5em;
+}
+
+nav a {
+  font-family: "Oswald", sans-serif;
+  font-weight: 500;
+  font-size: 1.5em;
+  color: #e93a8c;
+  text-decoration: none;
+  transition: font-size 2s, color 2s;
+  margin-right: 1.5em;
+}
+nav a :hover {
+  color: #96056a;
+  font-size: 2em;
+}
+nav a :visited {
+  color: #da648b;
+}
+nav a :active {
+  color: #ae15c2;
+}
+
+.logoredondo {
+  border-radius: 100%;
+  animation-name: rotacion;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+}
+
+.introduccion {
+  margin-top: 2em;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  justify-content: center;
+  align-items: center;
+}
+.introduccion img {
+  width: 25em;
+}
+
+/*peluqueria*/
+.degrade {
+  background-image: linear-gradient(to bottom, #ebbecf, white, pink);
+}
+
+.imagenes-pelo {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  align-items: center;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.imagen-mediana {
+  width: 300px;
+  height: 300px;
+  margin: 10 px;
+}
+
+.caja {
+  width: 50%;
+}
+
+.caja2 {
+  width: 40%;
+  height: 100%;
+}
+
+/*manicuria*/
+#grilla {
+  display: grid;
+  grid-template-areas: "fotosmanos fotosmanos fotosmanos fotosmanos" "contenido contenido contenido aside" "contenido contenido contenido aside" "extra extra extra aside";
+  grid-template-columns: 25% 25% 25% 25%;
+  grid-template-rows: auto auto auto auto;
+}
+
+.border {
+  border: solid #d34185 1px;
+}
+
+div#fotosmanos {
+  grid-area: fotosmanos;
+  display: flex;
+  flex-direction: row;
+  grid-gap: 20px 20px;
+  align-items: center;
+  justify-content: center;
+}
+
+.foto {
+  width: 20em;
+  height: 20em;
+}
+
+section#contenido {
+  grid-area: contenido;
+  justify-content: center;
+  text-align: center;
+  margin-left: 10em;
+  margin-right: 10em;
+}
+section#extra {
+  grid-area: extra;
+  justify-items: center;
+  justify-content: center;
+  margin-bottom: 5em;
+}
+
+.separador {
+  width: 50%;
+}
+
+aside {
+  grid-area: aside;
+  background-image: url("../imagenes salon/fondorosa.avif");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.texto-chico {
+  font-family: "Oswald", sans-serif;
+  font-size: 1em;
+  line-height: 2;
+}
+
+.img-manicuria {
+  height: 100%;
+  width: 100%;
+  border-radius: 25px;
+}
+
+/*medias*/
+@media (min-width: 601px) {
+  * {
+    margin: 0;
+    padding: 0;
+  }
+  footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    justify-items: center;
+  }
+  .logo {
+    width: 13em;
+  }
+  iframe {
+    width: 40em;
+    height: 20em;
+  }
+  .mapa {
+    width: 12em;
+    height: 10em;
+    margin: 0;
+    padding: 0;
+  }
+}
+p {
+  font-family: "Open Sans", sans-serif;
+  font-size: 20px;
+}
+
+@media (max-width: 600px) {
+  * {
+    margin: 0;
+    padding: 0;
+  }
+  .logoredondo {
+    display: none;
+  }
+  #key-salon {
+    display: none;
+  }
+  .logo {
+    width: 20em;
+  }
+  header {
+    background-image: url("../imagenes salon/bkgh.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: auto;
+    height: auto;
+  }
+  .imagen-masajes {
+    width: 1em;
+  }
+  .titulo-seccion {
+    text-align: center;
+    font-family: "Oswald", sans-serif;
+    font-weight: 500;
+    font-size: 35px;
+    color: rgb(158, 4, 76);
+  }
+  nav a {
+    display: block;
+    font-family: "Oswald", sans-serif;
+    font-weight: 500;
+    font-size: 1.5em;
+    color: #e93a8c;
+    text-decoration: none;
+    transition: font-size 2s, color 2s;
+    margin-right: 1.5em;
+  }
+  nav a :hover {
+    color: #96056a;
+    font-size: 2em;
+  }
+  footer {
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    justify-items: center;
+  }
+  /*--------Disposición de la grilla para pantallas chicas (manicuria)---------*/
+  #grilla {
+    display: grid;
+    grid-template-areas: "fotosmanos fotosmanos" "contenido contenido" "aside aside" "extra extra";
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto auto;
+  }
+  .introduccion {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content: center;
+    align-items: center;
+  }
+  div#fotosmanos {
+    grid-area: fotosmanos;
+    display: flex;
+    flex-direction: column;
+    grid-gap: 20px 20px;
+    align-items: center;
+    justify-content: center;
+  }
+}
+/* Titulo de masajes */
+.titulo {
+  background-image: linear-gradient(to bottom, #F8E8EE, pink, #F8E8EE);
+}
+
+.tipo-masaje {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.imagen-masajes {
+  width: 20em;
+}
+
+.animate__animated.animate__fadeIn {
+  --animate-duration: 3s;
+}
+
+#key-salon {
+  position: absolute;
+  top: 22em;
+  left: 12.5em;
+  width: 10em;
+  z-index: 1;
+}
+
+@keyframes rotacion {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */

@@ -1,3 +1,13 @@
+//Definición de variables
+$rosa-keySalon: #F8E8EE;
+$fuente-keySalon: 'Oswald', sans-serif;
+
+@mixin fuente($familia, $tamano, $color) {
+    font-family: $familia;
+    font-size: $tamano;
+    color: $color;
+}
+
 *
 {
     margin: 0%;
@@ -6,12 +16,12 @@
 
 body
 {
-    background-color: #F8E8EE;
+    background-color: $rosa-keySalon;
 }
 
 header
 {
-    background-image: url("imagenes salon/bkgh.png") ;
+    background-image: url("../imagenes salon/bkgh.png") ;
     background-repeat: no-repeat ;
     background-size: cover;
     height: 10em;
@@ -30,45 +40,35 @@ footer
 
 
 p{
-    font-family: 'Open Sans', sans-serif;
+    font-family: $fuente-keySalon;
     font-size: 20px;
 }
 
 h1{
-    font-family: 'Oswald', sans-serif;
+    @include fuente('Oswald', 35px, rgb(158, 4, 76));
     font-weight: 500;
-    font-size: 35px;
-   color:  rgb(158, 4, 76);
-    
 }
 
 .titulo-seccion{
     margin: 1em 1em 1em 1em;
-    font-family: 'Oswald', sans-serif;
-    font-weight: 500;
-    font-size: 35px;
-   color:  rgb(158, 4, 76);
-    
+    @extend h1;
 }
 
 h2{
-    font-family: 'Oswald', sans-serif;
+    font-family: $fuente-keySalon;
     font-weight: 500;
     font-size: 30px;
     color: rgb(158, 4, 76);
 }
 
 h3{
-    font-family: 'Oswald', sans-serif;
-    font-weight: 500;
+    @extend h2;
     font-size: 1.5em;
-    color: rgb(158, 4, 76);
 }
 
 h4{
-    font-family: 'Oswald', sans-serif;
+    @extend h2;
     font-weight: 300;
-    font-size: 30px;
     color: rgb(150, 48, 95);
 }
 
@@ -82,26 +82,23 @@ iframe{
 }
 
 nav a {
-    font-family: 'Oswald', sans-serif;
+    font-family: $fuente-keySalon;
     font-weight: 500;
     font-size: 1.5em;
     color: #e93a8c; 
     text-decoration: none;
     transition: font-size 2s, color 2s;
     margin-right: 1.5em;
-}
-
-nav a:hover {
-    color: #96056a; 
-    font-size: 2em;
-}
-
-a:visited {
-    color: #da648b;
-}
-
-a:active {
-    color: #ae15c2;
+    :hover{
+        color: #96056a; 
+        font-size: 2em;
+    }
+    :visited {
+        color: #da648b;
+    }
+    :active {
+        color: #ae15c2;
+    }
 }
 
 .logoredondo{
@@ -111,15 +108,16 @@ a:active {
     animation-iteration-count: infinite;
 }
 
-.introduccion img {
-    width: 25em;
-}
+
 .introduccion{
     margin-top: 2em;
     display: grid;
     grid-template-columns: 50% 50%;
     justify-content: center;
     align-items: center;
+    img {
+        width: 25em;
+    }
 }
 /*peluqueria*/
 .degrade{
@@ -167,7 +165,7 @@ div#fotosmanos{
     flex-direction: row;
     grid-gap: 20px 20px;
     align-items: center;
-     justify-content: center;
+    justify-content: center;
     
    
 }
@@ -178,36 +176,38 @@ div#fotosmanos{
     
    
 }
-section#contenido{
-    grid-area: contenido;
-    justify-content: center;
-    text-align: center;
-    margin-left: 10em;
-    margin-right: 10em;
 
-      
+section{
+    #contenido{
+        grid-area: contenido;
+        justify-content: center;
+        text-align: center;
+        margin-left: 10em;
+        margin-right: 10em;
+    }
+    #extra{
+        grid-area: extra;
+        justify-items: center;
+        justify-content: center;
+        margin-bottom:5em;
+    }
 }
+
 .separador{
     width: 50%;
 }
 aside{
     grid-area:aside;
-    background-image: url('imagenes salon/fondorosa.avif');
+    background-image: url('../imagenes salon/fondorosa.avif');
     background-repeat: no-repeat ;
     background-size: cover;
     
 }
 .texto-chico{
-    font-family: 'Oswald', sans-serif;
+    font-family: $fuente-keySalon;
     font-size: 1em;
     line-height: 2;
 
-}
-section#extra{
-    grid-area: extra;
-    justify-items: center;
-    justify-content: center;
-    margin-bottom:5em;
 }
 
 .img-manicuria{
@@ -250,6 +250,11 @@ section#extra{
         padding: 0;
     }
 }
+
+p{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 20px;
+}
 @media (max-width: 600px){
     
     * {
@@ -260,17 +265,15 @@ section#extra{
     .logoredondo{
         display: none;
     }
-
     #key-salon{
         display: none;
     }
-    
     .logo{
         width: 20em;
     }
     header
     {
-        background-image: url("imagenes salon/bkgh.png") ;
+        background-image: url("../imagenes salon/bkgh.png") ;
         background-repeat: no-repeat ;
         background-size: cover;
         width: auto;;
@@ -283,26 +286,28 @@ section#extra{
     
     .titulo-seccion{
         text-align: center;
-        font-family: 'Oswald', sans-serif;
+        font-family: $fuente-keySalon;
         font-weight: 500;
         font-size: 35px;
         color:  rgb(158, 4, 76);
     }
 
-    nav a {
+    nav{
+        a{
         display: block;
-        font-family: 'Oswald', sans-serif;
+        font-family: $fuente-keySalon;
         font-weight: 500;
         font-size: 1.5em;
         color: #e93a8c; 
         text-decoration: none;
         transition: font-size 2s, color 2s;
         margin-right: 1.5em;
-    }
-    
-    nav a:hover {
-        color: #96056a; 
-        font-size: 2em;
+
+        :hover{
+            color: #96056a; 
+            font-size: 2em;
+        }
+        }
     }
     
     footer {
@@ -339,7 +344,7 @@ section#extra{
         flex-direction: column;
         grid-gap: 20px 20px;
         align-items: center;
-        justify-content: center;
+         justify-content: center;
     }
 
 
@@ -364,7 +369,7 @@ background-image: linear-gradient(to bottom,#F8E8EE, pink, #F8E8EE);
     --animate-duration: 3s;
   }
 #key-salon{
-    position:absolute;
+    position: absolute;
     top:22em;
     left:12.5em;
     width: 10em;
