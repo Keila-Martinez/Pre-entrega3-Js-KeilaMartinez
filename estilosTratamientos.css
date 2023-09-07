@@ -65,3 +65,14 @@ a:active {
    color:  rgb(158, 4, 76);
     
 }
+@media (max-width: 600px){
+.card{
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    justify-items: center;
+    text-align: center;
+    margin-left: 4em;
+}
+
+}

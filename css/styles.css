@@ -280,6 +280,10 @@ p {
     text-align: center;
     justify-items: center;
   }
+  section#contenido {
+    margin-left: 0em;
+    margin-right: 0em;
+  }
   /*--------Disposición de la grilla para pantallas chicas (manicuria)---------*/
   #grilla {
     display: grid;
@@ -300,6 +304,19 @@ p {
     grid-gap: 20px 20px;
     align-items: center;
     justify-content: center;
+  }
+  .imagenes-pelo {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 0 auto;
+  }
+  .imagen-mediana {
+    width: 10em;
+    height: 10em;
+    margin: 10 px;
   }
 }
 /* Titulo de masajes */
