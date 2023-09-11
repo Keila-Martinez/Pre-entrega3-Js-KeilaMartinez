@@ -25,6 +25,16 @@ input{
     }
 }
 
+.contacto {
+   
+    a{
+        text-decoration: none;
+        font-size: 0.8em;
+        font-weight: bold;
+        color: #e93a8c;
+    }
+}
+
 .buscar{
     ::placeholder{
         color:#940d6b;
@@ -143,6 +153,7 @@ nav a {
     animation-name: rotacion;
     animation-duration: 10s;
     animation-iteration-count: infinite;
+    width: 60%;
 }
 
 
@@ -150,12 +161,19 @@ nav a {
     margin-top: 2em;
     display: grid;
     grid-template-columns: 50% 50%;
+    grid-auto-flow: row;
     justify-content: center;
     align-items: center;
-    img {
-        width: 25em;
-    }
+    
+   
 }
+
+#texto-index{
+    position: relative;
+    margin-left: 1em;
+    margin-right: 2em;
+}
+
 /*peluqueria*/
 .degrade{
     background-image: linear-gradient(to bottom,#ebbecf, white, pink);
@@ -271,12 +289,18 @@ aside{
     .animate__animated.animate__fadeIn{
         --animate-duration: 3s;
       }
+
+    #logo-index{
+        position:relative;
+    }
     #key-salon{
         position: absolute;
-        top:22em;
-        left:12.5em;
-        width: 10em;
+        top:50%;
+        left:50%;
+        width: 30%;
         z-index: 1;
+        transform:translate(-50%,-50%);
+        border-radius: 25%;
     }
     
     @keyframes rotacion {
@@ -303,6 +327,11 @@ aside{
         text-align: center;
         justify-items: center;
         
+    }
+
+    .main-index{
+        margin-right: 1.5em;
+        margin-left:1.5em;
     }
     
     
@@ -336,6 +365,7 @@ p{
     }
     .logoredondo{
         display: none;
+        
     }
     #key-salon{
         display: none;
