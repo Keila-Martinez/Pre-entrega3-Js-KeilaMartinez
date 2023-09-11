@@ -16,6 +16,7 @@ nav{
     font-family: 'Oswald', sans-serif;
     font-size: 24px;
     
+    
 }
 nav.navbar {
     background-color:transparent; /* Asegúrate de que el fondo de la barra de navegación sea transparente */
@@ -47,16 +48,14 @@ h4{
 }
 a {
     color: #e93a8c; 
+    transition: font-size 2s, color 2s;
 }
 a:hover {
-    color: #ff0000; 
+    text-decoration: none;
+    color: #500439; 
+    font-size: 1.2em;
 }
-a:visited {
-    color: #da648b;
-}
-a:active {
-    color: #ae15c2;
-}
+
 .titulo-seccion{
     margin: 1em 1em 1em 1em;
     font-family: 'Oswald', sans-serif;

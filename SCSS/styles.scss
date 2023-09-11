@@ -8,6 +8,38 @@ $fuente-keySalon: 'Oswald', sans-serif;
     color: $color;
 }
 
+input{
+    background-color: transparent;
+    border: 1px solid #f772c49c;
+    color: #940d6b;
+    font-weight: 500;
+    text-decoration: dashed;
+    font-family: $fuente-keySalon;
+    width: 10em;
+    transition: color 1s, background-color 1s, border 2s;
+    &:hover{
+        border: transparent;
+        background-color: #f772c49c;
+        color:white;
+       
+    }
+}
+
+.buscar{
+    ::placeholder{
+        color:#940d6b;
+        font-weight: 500;
+        transition: color 1s;
+    }
+  
+}
+input[type="search"]:focus {
+    outline: none; 
+}
+input:hover::placeholder {
+    color: white;
+}
+
 *
 {
     margin: 0%;
@@ -27,6 +59,17 @@ header
     height: 10em;
 }
 
+section#botones-input{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.botones{
+    margin-top: 1.8em;
+    margin-bottom: 1.5em;
+}
 footer 
 {
     background-color: rgb(253, 253, 253);
@@ -89,15 +132,9 @@ nav a {
     text-decoration: none;
     transition: font-size 2s, color 2s;
     margin-right: 1.5em;
-    :hover{
-        color: #96056a; 
+    &:hover{
+        color: #500439; 
         font-size: 2em;
-    }
-    :visited {
-        color: #da648b;
-    }
-    :active {
-        color: #ae15c2;
     }
 }
 
@@ -177,21 +214,20 @@ div#fotosmanos{
    
 }
 
-section{
-    #contenido{
-        grid-area: contenido;
-        justify-content: center;
-        text-align: center;
-        margin-left: 10em;
-        margin-right: 10em;
-    }
-    #extra{
+section#contenido{
+    grid-area: contenido;
+    justify-content: center;
+    text-align: center;
+    margin-left: 10em;
+    margin-right: 10em;
+
+}
+section#extra{
         grid-area: extra;
         justify-items: center;
         justify-content: center;
         margin-bottom:5em;
     }
-}
 
 .separador{
     width: 50%;
@@ -216,6 +252,41 @@ aside{
     width: 100%;
     border-radius: 25px;
 }
+
+/* Titulo de masajes */
+.titulo{
+    background-image: linear-gradient(to bottom,#F8E8EE, pink, #F8E8EE);
+    }
+    
+    .tipo-masaje{
+        display: flex;
+        flex-direction: row;
+        justify-content:center;
+    }
+    
+    .imagen-masajes{
+        width: 20em;
+    }
+    
+    .animate__animated.animate__fadeIn{
+        --animate-duration: 3s;
+      }
+    #key-salon{
+        position: absolute;
+        top:22em;
+        left:12.5em;
+        width: 10em;
+        z-index: 1;
+    }
+    
+    @keyframes rotacion {
+        0% {
+            transform: rotate(0deg);
+        }
+        100% {
+            transform: rotate(360deg);
+        }
+    }
 
 /*medias*/
 @media (min-width: 601px){
@@ -260,6 +331,7 @@ p{
     * {
         margin: 0;
         padding: 0;
+        overflow-x: hidden;
         
     }
     .logoredondo{
@@ -280,16 +352,17 @@ p{
         height: auto;
     }
 
-   .imagen-masajes{
-    width: 1em;
-    }
-    
     .titulo-seccion{
         text-align: center;
         font-family: $fuente-keySalon;
         font-weight: 500;
         font-size: 35px;
         color:  rgb(158, 4, 76);
+    }
+
+    .main-index{
+        margin-left: 1.5em;
+        margin-right: 1.5em;
     }
 
     nav{
@@ -302,11 +375,12 @@ p{
         text-decoration: none;
         transition: font-size 2s, color 2s;
         margin-right: 1.5em;
+        width: 100%;
 
         :hover{
             color: #96056a; 
             font-size: 2em;
-        }
+            }
         }
     }
     
@@ -320,18 +394,18 @@ p{
     }
 
     section#contenido{
-        margin-left: 0em;
-        margin-right: 0em;
+        margin-left: 1.5em;
+        margin-right: 1.5em;
     }
 
     /*--------Disposición de la grilla para pantallas chicas (manicuria)---------*/
     #grilla {
         display: grid;
         grid-template-areas: 
-        "fotosmanos fotosmanos"
-        "contenido contenido" 
-        "aside aside"
-        "extra extra";
+        "fotosmanos"
+        "contenido " 
+        "aside"
+        "extra";
         grid-template-columns: 1fr;
         grid-template-rows: auto auto auto auto;
        
@@ -366,41 +440,26 @@ p{
         margin: 10 px;
     }
 
- 
-
-}
-
-/* Titulo de masajes */
-.titulo{
-background-image: linear-gradient(to bottom,#F8E8EE, pink, #F8E8EE);
-}
-
-.tipo-masaje{
-    display: flex;
-    flex-direction: row;
-    justify-content:center;
-}
-
-.imagen-masajes{
-    width: 20em;
-}
-
-.animate__animated.animate__fadeIn{
-    --animate-duration: 3s;
-  }
-#key-salon{
-    position: absolute;
-    top:22em;
-    left:12.5em;
-    width: 10em;
-    z-index: 1;
-}
-
-@keyframes rotacion {
-    0% {
-        transform: rotate(0deg);
+    .tipo-masaje{
+        display: block;
+        flex-direction: column;
+        justify-content:center;
+        margin-right: 1.5em;
+        margin-left: 1.5em;
     }
-    100% {
-        transform: rotate(360deg);
+    
+    .imagen-masajes{
+        width: 10em;
     }
+
+    section#botones-input{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 0.2em;
+    }
+    
+
 }
+
