@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="Key salón-Estética" content="Los mejores tratamientos y cuidados para tu piel">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Oswald:wght@200;300;400;500&display=swap" rel="stylesheet">
+    <title>Formulario de Registro</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <style>
+        #botonIniciar {
+            background-color: pink;
+            border-color: pink;
+        }
+
+        .container {
+            display: flex;
+            justify-content: left;
+            margin: 0 0;
+            padding: 20px;
+            text-align: left;
+            vertical-align: middle;
+        }
+
+        .columna {
+            flex: 2;
+            margin-right: 20px;
+            max-width: 150px;
+            text-align: left;
+        }
+
+        /* Añade un estilo específico para las etiquetas */
+        .columna label {
+            width: 2000px;
+            height: 38px;
+            display: block; /* Hace que las etiquetas ocupen el ancho completo de su contenedor */
+            margin-bottom: 5px; /* Añade un pequeño espacio entre las etiquetas */
+            text-align: left;
+        }
+    </style>
+    </head>
+    <body>
+        <header>
+            <br/>
+            <section id="botones-input">
+                <div class="botones" id="botonesLogueo">
+                    <input type="button" id="btnRegistrarse" value="Registrarse">
+                    <input type="button" id="btnIniciarSesion" value="Iniciar sesión">
+                </div>
+                <div class="botones buscar">
+                    <input type="search" placeholder="Busqueda">
+                </div>
+            </section>
+            <section class="nav-index">
+            <nav style="text-align: center;">
+                <ul>
+                <a href="../index.html"> Inicio</a>
+                <a href="peluquería.html"> Peluquería</a>
+                <a href="masajes.html"> Masajes</a>
+                <a href="tratamientos.html"> Tratamientos</a> 
+                <a href="manicuría.html"> Manicuría</a>
+                </ul>
+            </nav>
+            </section>
+        </header>
+    <main>
+        
+        <form id="loginForm">
+            <h2 style="margin-left: 20px; margin-top: 50px;" class="mb-4">Iniciar Sesión</h2>
+            <div class="container">
+                <div class="columna">
+                    <label for="emailLogin">Correo Electrónico:</label>
+                    <label for="passwordLogin">Contraseña:</label>
+                </div>
+                <div class="columna">
+                    <input type="email" class="form-control" id="emailLogin" name="emailLogin" required>
+                    <input type="password" class="form-control" id="passwordLogin" name="passwordLogin" required>
+                </div>
+            </div>
+            <div id="mensaje"></div>
+            <button style="margin-top: -150px; margin-left: 20px"; type="button" id="botonIniciar" class="btn btn-primary" onclick="iniciarSesion()">Iniciar Sesión</button>
+        </form>
+
+    </main>
+    <footer >
+        <div class="contacto">
+            <h3>Nuestras formas de contacto:</h3>
+            <p><a href="mailto:Key_salon_relax@gmail.com">Key_salon_relax@gmail.com</a></p>
+            <p><a href="#">@Key_salon_relax</a></p>
+            <p><a href="tel:43859-2384">43859-2384</a></p>
+        </div>
+        <div class="logo">
+            <img class="logo" src="../imagenes salon/logo.png" alt="logo">
+        </div>
+        <div>
+            <iframe class="mapa" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3277.329673547565!2d-58.25436492476229!3d-34.77247506642927!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95a32ececc6414df%3A0x7cc2b7454ff585bd!2sC.%205%201241%2C%20B1884AUY%20Berazategui%20Oeste%2C%20Provincia%20de%20Buenos%20Aires!5e0!3m2!1ses!2sar!4v1689550693714!5m2!1ses!2sar"
+                 style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+        </div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="../scripts/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</body>
+</html>
