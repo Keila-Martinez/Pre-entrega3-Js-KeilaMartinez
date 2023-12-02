@@ -15,6 +15,26 @@ input:hover {
   color: white;
 }
 
+select {
+  background-color: transparent;
+  border: 1px solid rgba(247, 114, 196, 0.6117647059);
+  color: #940d6b;
+  font-weight: 500;
+  text-decoration: dashed;
+  font-family: "Oswald", sans-serif;
+  width: 10em;
+  transition: color 1s, background-color 1s, border 2s;
+}
+select:hover {
+  border: transparent;
+  background-color: rgba(247, 114, 196, 0.336);
+  color: purple;
+}
+
+select option:hover {
+  background-color: red; /* Reemplaza 'yourColor' con el color deseado */
+}
+
 .contacto a {
   text-decoration: none;
   font-size: 0.8em;
@@ -274,6 +294,45 @@ aside {
   z-index: 1;
   transform: translate(-50%, -50%);
   border-radius: 25%;
+}
+
+/*turnos*/
+ /* Cambia la fuente del calendario */
+ .flatpickr-calendar.open {
+  font-family: "Oswald", sans-serif;
+  z-index: 0 !important;
+}
+
+.swal2-container{
+  z-index: 2;
+}
+
+/* Cambia el color de fondo del encabezado del calendario */
+.flatpickr-calendar .flatpickr-months .flatpickr-monthHead, .flatpickr-calendar .flatpickr-weekdays {
+  color: #fff; /* Color del texto */
+}
+
+.flatpickr-day.today{
+  border-color: #ff00c8 !important;
+}
+.flatpickr-day:hover{
+  border-color: #f7d3ef !important;
+      background: #f7d3ef !important;
+}
+   /* Cambia el color de fondo y del texto de los días seleccionados */
+   .flatpickr-day.selected, .flatpickr-day.inRange, .flatpickr-day.selected:focus,
+   .flatpickr-day.inRange:focus {
+      border-color: #ff00c8 !important;
+      background: #ff00c8 !important; /* Color azul, cambia según tus preferencias */
+      color: #fff !important; /* Color del texto (importante para anular estilos anteriores) */
+   }
+section#turnos{
+  height: 80vh;
+}
+
+.container {
+  max-width: 400px; /* Ajusta según sea necesario */
+  width: 100%;
 }
 
 @keyframes rotacion {
